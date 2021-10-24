@@ -58,8 +58,7 @@
               <li class="scroll-to-section"><a href="#about">About</a></li>
               <li class="scroll-to-section"><a href="artikel.html">Artikel</a></li>
               <li class="scroll-to-section"><a href="#video">Videos</a></li> 
-              <li class="scroll-to-section"><div class="main-red-button-hover"><a href="login.html">Login</a></div></li> 
-            </ul>        
+              <li class="scroll-to-section" onclick="logout()"><div class="main-red-button-hover"><a href="login.html">Logout</a></div></li>             </ul>        
             <a class='menu-trigger'>
                 <span>Menu</span>
             </a>
@@ -527,8 +526,8 @@
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
-
-  <script>
+  <script src="assets/js/login.js"></script>
+  <script> 
   // Acc
     $(document).on("click", ".naccs .menu div", function() {
       var numberIndex = $(this).index();
