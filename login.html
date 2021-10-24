@@ -8,26 +8,56 @@
   <link rel="stylesheet" href="assets/css/login.css">
   <title>Document</title>
 </head>
-<body>
-  <div class="login-box">
-    <h2>Login</h2>
-    <form>
-      <div class="user-box">
-        <input type="text" name="" required="">
-        <label>Username</label>
-      </div>
-      <div class="user-box">
-        <input type="password" name="" required="">
-        <label>Password</label>
-      </div>
-      <a href="index.html">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Submit
-      </a>
-    </form>
+<div class="cont">
+  <div class="form sign-in">
+      <h2>Welcome</h2>
+      <label>
+          <span>Email</span>
+          <input type="email" id="un" />
+      </label>
+      <label>
+          <span>Password</span>
+          <input type="password" id="pw"/>
+      </label>
+      <p class="forgot-pass">Forgot password?</p>
+      <button type="button" class="submit" id="enter">Sign In</button>
+   
   </div>
+  <div class="sub-cont">
+      <div class="img">
+          <div class="img__text m--up">
+           
+              <h3>Don't have an account? Please Sign up!<h3>
+          </div>
+          <div class="img__text m--in">
+          
+              <h3>If you already has an account, just sign in.<h3>
+          </div>
+          <div class="img__btn">
+              <span class="m--up">Sign Up</span>
+              <span class="m--in">Sign In</span>
+          </div>
+      </div>
+      <div class="form sign-up">
+          <h2>Create your Account</h2>
+          <label>
+              <span>Username</span>
+              <input type="text" id="unnew" />
+          </label>
+          <label>
+              <span>Email</span>
+              <input type="email" />
+          </label>
+          <label>
+              <span>Password</span>
+              <input type="password" id="pwnew" />
+          </label>
+          <button type="button" class="submit" id="enternew">Sign Up</button>
+          
+      </div>
+  </div>
+</div>
+
+<script src="assets/js/login.js"></script>
 </body>
 </html>
