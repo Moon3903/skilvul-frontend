@@ -1,11 +1,9 @@
-document.querySelector('.img__btn').addEventListener('click', function() {
+document.querySelector('.img__btn')?.addEventListener('click', function() {
     document.querySelector('.cont').classList.toggle('s--signup');
 });
 
 //Define an array to hold users as they're added in the new registration page
 var userArray = [];
-      const emailValidator = new RegExp(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
-      const passwordValidator = new RegExp(/[A-Za-z\d\!\@\#\$\%\^\&\*]{8,}/);
 //On first load, skip this step (null check)
 //But when returning to the main page after adding users, get all the added users
 //out of the array passed between the pages and into the working userArray
@@ -24,6 +22,11 @@ function verifyNew(){
 
   var un = document.getElementById('unnew').value;
 
+  var nameRegex = /^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$/;
+  if (!nameRegex.test(un)) {
+    alert('Username Tidak Sesuai');
+    return;
+  }
   //once users have been added to the user array,
   //check the new usernames against the known
   //if there's a match kick them back
@@ -49,23 +52,33 @@ function verifyNew(){
 
 function verifySecure(){
 
+  
+    const emailValidator = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
+    if (!emailValidator.test(document.getElementById("email").value)) {
+      alert('Email Tidak Sesuai');
+      return;
+    }
+
   var pw = document.getElementById('pwnew').value;
 
   //check that the password entered is 8 characters or more
-  if(pw.length>=8){
+  const passwordValidator = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/);
+  if(pw.length>=8 && passwordValidator.test(pw)){
       addUser();
   }else{
-      alert("Please enter a password of 8 characters or more");
+      alert("Please enter Strong Password");
       document.getElementById('pwnew').value = "";
   };
   
 };
+
 
 function addUser(){
   
   var newUser = {
       un: document.getElementById('unnew').value,
       pw: document.getElementById('pwnew').value,
+      email : document.getElementById('email').value,
   };
 
   //add the user to the array, put the array into the shared array, clear the inputs
@@ -73,6 +86,7 @@ function addUser(){
   sessionStorage.setItem('passingArray', JSON.stringify(userArray));
   document.getElementById('unnew').value = "";
   document.getElementById('pwnew').value = "";
+  document.getElementById('email').value = "";
 
   alert("Your username and password have been successfully added! Please click the Return to Login link to log in");
 };
@@ -103,7 +117,7 @@ function authenticate(){
           if((un == userArray[i].un) && (pw == userArray[i].pw)){
               alert("You're in!");
               window.location.href = "index.html";
-              sessionStorage.setItem("userActive", un, pw);
+              sessionStorage.setItem("userActive", JSON.stringify({un, pw}));
               document.getElementById('un').value = "";
               document.getElementById('pw').value = "";
               break;
@@ -142,3 +156,58 @@ function troubleshoot(un, pw){
 function logout() {
     sessionStorage.removeItem('userActive');
 }  
+
+var ALERT_TITLE = "Pesan";
+var ALERT_BUTTON_TEXT = "Ok";
+
+if (document.getElementById) {
+  window.alert = function (txt) {
+    createCustomAlert(txt);
+  };
+}
+
+function createCustomAlert(txt) {
+  d = document;
+
+  if (d.getElementById("modalContainer")) return;
+
+  mObj = d.getElementsByTagName("body")[0].appendChild(d.createElement("div"));
+  mObj.id = "modalContainer";
+  mObj.style.height = d.documentElement.scrollHeight + "px";
+
+  alertObj = mObj.appendChild(d.createElement("div"));
+  alertObj.id = "alertBox";
+  if (d.all && !window.opera)
+    alertObj.style.top = document.documentElement.scrollTop + "px";
+  alertObj.style.left =
+    (d.documentElement.scrollWidth - alertObj.offsetWidth) / 2 + "px";
+  alertObj.style.visiblity = "visible";
+
+  h1 = alertObj.appendChild(d.createElement("h1"));
+  h1.appendChild(d.createTextNode(ALERT_TITLE));
+
+  msg = alertObj.appendChild(d.createElement("p"));
+  //msg.appendChild(d.createTextNode(txt));
+  msg.innerHTML = txt;
+
+  btn = alertObj.appendChild(d.createElement("a"));
+  btn.id = "closeBtn";
+  btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
+  btn.href = "#";
+  btn.focus();
+  btn.onclick = function () {
+    removeCustomAlert();
+    return false;
+  };
+
+  alertObj.style.display = "block";
+}
+
+function removeCustomAlert() {
+  document
+    .getElementsByTagName("body")[0]
+    .removeChild(document.getElementById("modalContainer"));
+}
+function ful() {
+  alert("Alert this pages");
+}
