@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+    <link rel="icon" href="assets/images/icon.png" type="image/gif" sizes="50X50">
     <title>Newsky</title>
 
     <!-- Bootstrap core CSS -->
@@ -23,6 +24,7 @@
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/artikel.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   </head>
 
@@ -42,7 +44,7 @@
           <ul class="nav">
             <li class="scroll-to-section"><a href="index.html">Home</a></li>
             <li class="scroll-to-section"><a href="index.html">About</a></li>
-            <li class="scroll-to-section"><a href="index.html" class="active">Artikel</a></li>
+            <li class="scroll-to-section"><a href="artikel.html" class="active">Artikel</a></li>
             <li class="scroll-to-section"><a href="index.html">Videos</a></li> 
           </ul>        
           <a class='menu-trigger'>
@@ -101,9 +103,7 @@
                     <p>An aeterno percipit per. His minim maiestatis consetetur et, brute tantas iracundia id sea. Vim tota nostrum reformidans te. Nam ad appareat mediocritatem, mediocrem similique usu ex, scaevola invidunt eu sed.</p>
                     <p>Reque admodum praesent ei nec. Ad eius phaedrum conclusionemque cum, pri cu suas essent saperet. No vero ludus habemus qui. Per ex errem torquatos, eam in tale sumo mentitum. Cum nulla viderer no. Pri id antiopam volutpat evertitur, in vidit interpretaris nec.</p>
                     <p>Te option apeirian corrumpit nec, has et tollit minimum molestie. Nam et justo everti, tale repudiandae cu nec. Aliquip legendos evertitur ne sit, mazim sadipscing sea ei. Sea no facete probatus vulputate, ex pri reque tempor. Odio adolescens ius te, docendi suscipit indoctum at qui.</p>
-                    <blockquote>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                    </blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <p>An aeterno percipit per. His minim maiestatis consetetur et, brute tantas iracundia id sea. Vim tota nostrum reformidans te. Nam ad appareat mediocritatem, mediocrem similique usu ex, scaevola invidunt eu sed.</p>
                     <p>Reque admodum praesent ei nec. Ad eius phaedrum conclusionemque cum, pri cu suas essent saperet. No vero ludus habemus qui. Per ex errem torquatos, eam in tale sumo mentitum. Cum nulla viderer no. Pri id antiopam volutpat evertitur, in vidit interpretaris nec.</p>
                     <p>Te option apeirian corrumpit nec, has et tollit minimum molestie. Nam et justo everti, tale repudiandae cu nec. Aliquip legendos evertitur ne sit, mazim sadipscing sea ei. Sea no facete probatus vulputate, ex pri reque tempor. Odio adolescens ius te, docendi suscipit indoctum at qui.</p>
@@ -121,47 +121,7 @@
 
                 <!-- blog comments -->
                 <div class="blog-comments">
-                    <h3>5 Comments</h3>
-
-                    <!-- single comment -->
-                    <div class="media">
-                        <div class="media-left">
-                            <img src="assets/images/video-thumb-01.png" alt="">
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">John Doe</h4>
-                            <p>Cu his iudico appareat ullamcorper, at mea ignota nostrum. Nonumy argumentum id cum, eos adversarium contentiones id</p>
-                            <div class="date-reply"><span>Oct 18, 2017 - 4:00AM</span><a href="#" class="reply">Reply</a></div>
-                        </div>
-
-                        <!-- comment reply -->
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="assets/images/video-thumb-01.png" alt="">
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">John Doe</h4>
-                                <p>Cu his iudico appareat ullamcorper, at mea ignota nostrum. Nonumy argumentum id cum, eos adversarium contentiones id</p>
-                                <div class="date-reply"><span>Oct 18, 2017 - 4:00AM</span><a href="#" class="reply">Reply</a></div>
-                            </div>
-                        </div>
-                        <!-- /comment reply -->
-
-                        <!-- comment reply -->
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="assets/images/video-thumb-01.png" alt="">
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">John Doe</h4>
-                                <p>Cu his iudico appareat ullamcorper, at mea ignota nostrum. Nonumy argumentum id cum, eos adversarium contentiones id</p>
-                                <div class="date-reply"><span>Oct 18, 2017 - 4:00AM</span><a href="#" class="reply">Reply</a></div>
-                            </div>
-                        </div>
-                        <!-- /comment reply -->
-
-                    </div>
-                    <!-- /single comment -->
+                    <h3>Comments</h3>
 
                     <!-- single comment -->
                     <div class="media">
@@ -175,20 +135,18 @@
                         </div>
                     </div>
                     <!-- /single comment -->
-
-                    <!-- blog reply form -->
-                    <div class="blog-reply-form">
-                        <h3>Leave Comment</h3>
-                        <form>
-                            <input class="input name-input" type="text" name="name" placeholder="Name">
-                            <input class="input email-input" type="email" name="email" placeholder="Email">
-                            <textarea class="input" name="message" placeholder="Enter your Message"></textarea>
-                            <button class="main-button icon-button">Submit</button>
-                        </form>
-                    </div>
-                    <!-- /blog reply form -->
-
                 </div>
+                <!-- blog reply form -->
+                <div class="blog-reply-form">
+                  <h3>Leave Comment</h3>
+                  <form>
+                      <input id="nameComment" class="input name-input" type="text" name="name" placeholder="Name">
+                      <input id="emailCommnet" class="input email-input" type="email" name="email" placeholder="Email">
+                      <textarea id="contentComment" class="input" name="message" placeholder="Enter your Message"></textarea>
+                      <button id="newComment" class="main-button icon-button">Submit</button>
+                  </form>
+              </div>
+              <!-- /blog reply form -->
                 <!-- /blog comments -->
             </div>
             <!-- /main blog -->
@@ -222,30 +180,30 @@
 
                     <!-- single posts -->
                     <div class="single-post">
-                        <a class="single-post-img" href="blog-post.html">
+                        <a class="single-post-img" href="detail_artikel.html">
                             <img src="assets/images/video-thumb-01.png" alt="">
                         </a>
-                        <a href="blog-post.html">Pro eu error molestie deserunt.</a>
+                        <a href="detail_artikel.html">Pro eu error molestie deserunt.</a>
                         <p><small>By : John Doe .18 Oct, 2017</small></p>
                     </div>
                     <!-- /single posts -->
 
                     <!-- single posts -->
                     <div class="single-post">
-                        <a class="single-post-img" href="blog-post.html">
+                        <a class="single-post-img" href="detail_artikel.html">
                             <img src="assets/images/video-thumb-01.png" alt="">
                         </a>
-                        <a href="blog-post.html">Pro eu error molestie deserunt.</a>
+                        <a href="detail_artikel.html">Pro eu error molestie deserunt.</a>
                         <p><small>By : John Doe .18 Oct, 2017</small></p>
                     </div>
                     <!-- /single posts -->
 
                     <!-- single posts -->
                     <div class="single-post">
-                        <a class="single-post-img" href="blog-post.html">
+                        <a class="single-post-img" href="detail_artikel.html">
                             <img src="assets/images/video-thumb-01.png" alt="">
                         </a>
-                        <a href="blog-post.html">Pro eu error molestie deserunt.</a>
+                        <a href="detail_artikel.html">Pro eu error molestie deserunt.</a>
                         <p><small>By : John Doe .18 Oct, 2017</small></p>
                     </div>
                     <!-- /single posts -->
@@ -357,5 +315,6 @@
         }
     });
   </script>
+  <script src="js/detail_artikel.js" type="module"></script>
 </body>
 </html>
