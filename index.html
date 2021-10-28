@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" href="assets/images/icon.png" type="image/gif" sizes="50X50">
+  <title>Newsky</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-onix-digital.css">
+  <link rel="stylesheet" href="assets/css/animated.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="assets/images/logo.png">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#about">About</a></li>
+              <li class="scroll-to-section"><a href="artikel.html">Artikel</a></li>
+              <li class="scroll-to-section"><a href="#video">Videos</a></li>
+              <li class="scroll-to-section" onclick="logout()">
+                <div class="main-red-button-hover"><a href="login.html">Logout</a></div>
+              </li>
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="owl-carousel owl-banner">
+                <div class="item header-text">
+                  <h6>Selamat datang di Newsky!</h6>
+                  <h2>Cari <em>berita </em><br>dan <em>informasi </em><br><span>ya disini!</span><span>!!</span></h2>
+                  <p>Bekerjasama dengan Greenpeace Indonesia</p>
+                  <div class="down-buttons">
+                    <div class="main-blue-button-hover">
+                      <a href="#portfolio">Baca artikel terkini</a>
+                    </div>
+                    <!-- <div class="call-button">
+                      <a rel="artikel" href="index.html"><i class="fa fa-phone"></i> +62 21 521 2553</a>
+                    </div> -->
+                  </div>
+                </div>
+                <!-- <div class="item header-text">
+                  <h6>Lorem Ipsum</h6>
+                  <h2>Lorem Ipsum<em>Lorem Ipsum</em> Lorem Ipsum <span>Lorem Ipsum</span></h2>
+                  <p>Lorem Ipsum</p>
+                  <div class="down-buttons">
+                    <div class="main-blue-button-hover">
+                      <a href="#services">Lorem Ipsum</a>
+                    </div>
+                    <div class="call-button">
+                      <a rel="artikel" href="index.html"><i class="fa fa-phone"></i> +62 21 521 2553</a>
+                    </div>
+                  </div>
+                </div> -->
+                <div class="item header-text">
+                  <h6>Video Reportase Terbaru</h6>
+                  <h2>Tonton <em>reportase kami</em> agar lebih <span>lebih up to date</span></h2>
+                  <p>Tonton video esklusif reportase kami dalam berita-berita terkini</p>
+                  <div class="down-buttons">
+                    <div class="main-blue-button-hover">
+                      <a href="#video">Tonton Video</a>
+                    </div>
+                    <!-- <div class="call-button">
+                      <a rel="artikel" href="artikel.html"><i class="fa fa-phone"></i> 050-040-0320</a>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="services" class="our-services section">
+    <div class="services-right-dec">
+      <img src="assets/images/services-right-dec.png" alt="">
+    </div>
+    <div class="container">
+      <div class="services-left-dec">
+        <img src="assets/images/services-left-dec.png" alt="">
+      </div>
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h2>Kategori <em>Artikel</em></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-services">
+            <div class="item">
+              <h4>Hutan</h4>
+              <div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="item">
+              <h4>Sungai</h4>
+              <div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="item">
+              <h4>Fosil</h4>
+              <div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="item">
+              <h4>Cuaca Ekstrim</h4>
+              <div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="item">
+              <h4>Politik</h4>
+              <div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="item">
+              <h4>Nasional</h4>
+              <div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div>
+              <p>Feel free to use this template for your business</p>
+            </div>
+            <div class="item">
+              <h4>Internasional</h4>
+              <div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="item">
+              <h4>Olahraga</h4>
+              <div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="item">
+              <h4>Teknologi</h4>
+              <div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div>
+              <p>Feel free to use this template for your business</p>
+            </div>
+            <div class="item">
+              <h4>Hiburan</h4>
+              <div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="item">
+              <h4>Gaya Hidup</h4>
+              <div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="about-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="left-image">
+            <img src="https://www.greenpeace.org/indonesia/wp-content/themes/planet4-master-theme/images/gp-logo.svg"
+              alt="Two Girls working together">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h2><em>GreenPeace</em> hadir karena bumi yang rapuh ini perlu suara. Butuh solusi. Butuh perubahan.
+              <span>Butuh aksi.</span> </h2>
+            <p>Di seluruh dunia, kita berdiri bersama-sama dengan masyarakat, menuntut pertanggung jawaban berbagai
+              pemerintahan dan perusahaan untuk bertanggung jawab. Mulai dari jalanan hingga ke tempat para pengambil
+              keputusan, kita mempunyai kekuatan nyata jika kita bekerja sama.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="portfolio" class="our-portfolio section">
+    <div class="portfolio-left-dec">
+      <img src="assets/images/portfolio-left-dec.png" alt="">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h2>Berita <em>Populer </em> <span>Terkini</span></h2>
+            <!-- <span>Our Greenpeace</span> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="popular" class="owl-carousel owl-portfolio">
+            <div class="item">
+              <div class="thumb">
+                <img src="assets/images/berita1.png" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a rel="artikel" href="artikel.html" target="_parent">
+                      <h4>Surat Keturunan Sultan Aceh soal Situs Sejarah Dibalas Turki</h4>
+                    </a>
+                    <span>17/08/2021</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assets/images/berita2.png" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a rel="artikel" href="artikel.html">
+                      <h4>Kasus Suap Bupati Kuansing: Rp2 M Buat Izin Kebun Sawit</h4>
+                    </a>
+                    <span>17/08/2021</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assets/images/berita3.png" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a rel="sponsored" href="https://templatemo.com/tm-562-space-dynamic" target="_parent">
+                      <h4>Dorong UMKM Bangkit, Sandiaga Buka KaTa Kreatif di Aceh</h4>
+                    </a>
+                    <span>17/08/2021</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assets/images/berita4.png" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a rel="artikel" href="artikel.html">
+                      <h4>Alasan Apple 'Bunuh' Touch Bar di Macbook Pro Terbaru</h4>
+                    </a>
+                    <span>17/08/2021</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assets/images/berita5.png" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a rel="artikel" href="artikel.html">
+                      <h4>Cara Menggunakan WhatsApp Tanpa Internet</h4>
+                    </a>
+                    <span>17/08/2021</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assets/images/berita6.png" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a rel="artikel" href="artikel.html">
+                      <h4>Greysia/Apriyani Mengaku Menang Susah Payah di Denmark Open</h4>
+                    </a>
+                    <span>17/08/2021</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="pricing" class="pricing-tables">
+    <div class="tables-left-dec">
+      <img src="assets/images/tables-left-dec.png" alt="">
+    </div>
+    <div class="tables-right-dec">
+      <img src="assets/images/tables-right-dec.png" alt="">
+    </div>
+  </div>
+
+
+
+  <div id="video" class="our-videos section">
+    <div class="videos-left-dec">
+      <img src="assets/images/videos-left-dec.png" alt="">
+    </div>
+    <div class="videos-right-dec">
+      <img src="assets/images/videos-right-dec.png" alt="">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-8">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="thumb">
+                          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/oPjvo86onio"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/hxb4ET-kvOY"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/1yDJ4hzxm1s"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/Ok09gOwANFQ"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe> </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <div class="menu">
+                    <div class="active">
+                      <div class="thumb">
+                        <img src="assets/images/video-thumb-01.png" alt="">
+                        <div class="inner-content">
+                          <h4>Video</h4>
+                          <span>Polisi Gagalkan Penyeludupan 72ribu benur</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <img src="assets/images/video-thumb-02.png" alt="">
+                        <div class="inner-content">
+                          <h4>Video</h4>
+                          <span>PON XX PAPUA: TARGET PRESTASI KELAS DUNIA (H-40 PON XX Papua)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <img src="assets/images/video-thumb-03.png" alt="Marketing">
+                        <div class="inner-content">
+                          <h4>Video</h4>
+                          <span>Labuan Bajo, Permata di Timur Indonesia</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <img src="assets/images/video-thumb-04.png" alt="SEO Work">
+                        <div class="inner-content">
+                          <h4>Video</h4>
+                          <span>Pesona Bintan, Bumi Segantang Lada - Inside Indonesia</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="section-heading">
+            <h2>Lokasi <em>Tempat</em> <span>Greenpeace</span></h2>
+            <div id="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3826788651786!2d106.82908061434053!3d-6.213156662586529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f384cf4140a1%3A0xf636f5009d864baa!2sGreenpeace%20Indonesia!5e0!3m2!1sid!2sus!4v1634693627828!5m2!1sid!2sus"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="info">
+              <span><i class="fa fa-phone"></i> <a rel="artikel" href="artikel.html">Tel : +62 21 521 2552<br>Fax: +62
+                  21 521 2553</a></span>
+              <span><i class="fa fa-envelope"></i> <a rel="artikel"
+                  href="artikel.html">newsky@greenpeace.co.id</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <form id="contact" action="" method="get">
+            <div class="row">
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
+                    required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="textarea" name="surname" id="feedback" placeholder="Feedback" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="submitFeedback" class="main-button">Submit Request</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="contact-dec">
+      <img src="assets/images/contact-dec.png" alt="">
+    </div>
+    <div class="contact-left-dec">
+      <img src="assets/images/contact-left-dec.png" alt="">
+    </div>
+  </div>
+
+  <div class="footer-dec">
+    <img src="assets/images/footer-dec.png" alt="">
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="about footer-item">
+            <div class="logo">
+              <a rel="artikel" href="artikel.html"><img src="assets/images/logo.png" alt="Onix Digital TemplateMo"></a>
+            </div>
+            <a rel="artikel" href="artikel.html">newsky@greenpeace.co.id</a>
+            <ul>
+              <li><a rel="artikel" href="artikel.html"><i class="fa fa-facebook"></i></a></li>
+              <li><a rel="artikel" href="artikel.html"><i class="fa fa-twitter"></i></a></li>
+              <li><a rel="artikel" href="artikel.html"><i class="fa fa-behance"></i></a></li>
+              <li><a rel="artikel" href="artikel.html"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="services footer-item">
+            <h4>Services</h4>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="community footer-item">
+            <h4>Community</h4>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="subscribe-newsletters footer-item">
+            <h4>Subscribe Newsletters</h4>
+            <p>Get our latest news and ideas to your inbox</p>
+            <form action="#" method="get">
+              <input type="text" name="email" id="emailNewsletter" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+              <button type="submit" id="submitNewsletter" class="main-button "><i class="fa fa-paper-plane-o"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="copyright">
+            <p>Copyright © 2021 Newsky Digital Co.Id, Ltd. All Rights Reserved.
+              <br>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/login.js"></script>
+  <script>
+    // Acc
+    $(document).on("click", ".naccs .menu div", function () {
+      var numberIndex = $(this).index();
+
+      if (!$(this).is("active")) {
+        $(".naccs .menu div").removeClass("active");
+        $(".naccs ul li").removeClass("active");
+
+        $(this).addClass("active");
+        $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
+
+        var listItemHeight = $(".naccs ul")
+          .find("li:eq(" + numberIndex + ")")
+          .innerHeight();
+        $(".naccs ul").height(listItemHeight + "px");
+      }
+    });
+  </script>
+  <script src="js/index.js" type="module"></script>
+</body>
+
+</html>
